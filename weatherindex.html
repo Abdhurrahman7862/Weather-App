@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="weatherstyle.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="div">
+      <div class="card"style="">
+        <div class="search">
+          <input type="text" placeholder="enter city name" spellcheck="false" class="input" />
+          <button style="border-radius: 50%; padding: 3px">
+            <img
+              src="weather-app-img/images/search.png"
+              alt=""
+              class="searchicon"
+              onclick="findcitynews(),check()"
+            />
+          </button>
+        </div>
+        <img src="weather-app-img/images/rn.png" alt="Image" class="imgs" />
+        <h3 class="deg">__ <sup style="font-size: 11px">o</sup> C</h3>
+        <h2 style="margin-top: 10px" class="city">City</h2>
+        <div class="deatils" style="display: flex;justify-content: space-between;flex-wrap: nowrap;align-items: center;margin-top: 30px;padding: 0 20px;">
+          <div class="humidity" style="display: grid;grid-template-columns: 1fr 1fr;column-gap:0px;align-items: center;justify-content: center;">
+            <img
+              style="width: 50%; height: 70%"
+              src="weather-app-img/images/humidity.png"
+              alt=""
+              class="humidity-img"
+            />
+            
+            <h3 style="font-size: 40px;margin-left: -80%;" class="humidity-range">__%</h3>
+            <h3 class="humidity-content"style="position: relative;right: -30%;">Humidity</h3>
+          </div>
+          
+          <div class="speed" style="display: grid;grid-template-columns: 1fr 1.5fr;align-items: center;justify-content: center;column-gap: 10px;" >
+            <img src="weather-app-img/images/wind.png" style="min-width: 50px;min-height: 50px;max-width: 50%;max-height: 70%;;margin-right: 0px;padding-right: 0px;position: relative;right: -20%; " class="wind-img">
+            <h3 class="wind-speed"style="font-size:1.5rem;margin-left:0px">__ KM/h</h3><p></p>
+            <tr><h4 class="wind-label"style="position: relative;left:-30%;flex-wrap:nowrap">Wind speed</h4></tr>
+          </div>
+          
+        </div>
+        <h1 style="font-style: italic;font: bold;color: whitesmoke;margin-top: 30px;">TOP NEWS OF THE CITY:</h1>
+        <br><br>
+
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="search news here.."
+            class="inputtop"
+          />
+          <button id="search-button" onclick="findnews()">search</button>
+        </div>
+        <main id="blog-container" class="obj-width"></main>
+      </div>
+    </div>
+    <script  src="app.js"></script>
+    <script src="script.js"></script>
+
+        
+
+  </body>
+</html>
